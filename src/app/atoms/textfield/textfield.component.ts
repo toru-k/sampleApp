@@ -6,24 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./textfield.component.scss']
 })
 export class TextfieldComponent implements OnInit {
-  textfield: TextfieldParams;
+  textfield: Textfield;
   constructor() {}
 
   ngOnInit() {}
 
-  setObject(params: TextfieldParams): void {
+  setObject(params: Textfield): void {
     this.textfield = params;
   }
 }
 
-export class TextfieldParams {
+export interface Textfield {
   name: string;
   value: string;
   placeholder: string;
-
-  constructor(name: string, value: string, placeholder: string) {
-    this.name = name;
-    this.value = value;
-    this.placeholder = placeholder;
-  }
 }

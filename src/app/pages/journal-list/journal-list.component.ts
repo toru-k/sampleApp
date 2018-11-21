@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {
-  TextfieldParams,
+  Textfield,
   TextfieldComponent
 } from '../../atoms/textfield/textfield.component';
 
@@ -16,11 +16,11 @@ export class JournalListComponent implements OnInit {
   private textfieldComponent: TextfieldComponent;
 
   ngOnInit() {
-    const textfieldParams: TextfieldParams = new TextfieldParams(
-      'test1',
-      '入力済みです',
-      '値を設定してください'
-    );
-    this.textfieldComponent.setObject(textfieldParams);
+    const textfield: Textfield = {
+      name: 'test1',
+      value: '入力済みです',
+      placeholder: '値を設定してください'
+    };
+    this.textfieldComponent.setObject(textfield);
   }
 }
