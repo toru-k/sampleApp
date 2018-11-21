@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Icon, IconComponent } from '../../atoms/icon/icon.component';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  @ViewChild(IconComponent)
+  private iconComponent: IconComponent;
+  private homeIcon: Icon;
+  constructor() {}
 
   ngOnInit() {
+    this.homeIcon = { name: 'home' };
+    this.iconComponent.setIcon(this.homeIcon);
   }
-
 }
