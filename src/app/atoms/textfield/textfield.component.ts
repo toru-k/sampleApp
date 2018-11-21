@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Textfield } from './textfield';
 
 @Component({
   selector: 'app-textfield',
@@ -6,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./textfield.component.scss']
 })
 export class TextfieldComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
