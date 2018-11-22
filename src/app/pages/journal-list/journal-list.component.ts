@@ -1,8 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import {
-  Textfield,
-  TextfieldComponent
-} from '../../atoms/textfield/textfield.component';
+import { Component, OnInit } from '@angular/core';
+import { Textfield } from '../../atoms/textfield/textfield.component';
 
 @Component({
   selector: 'app-journal-list',
@@ -12,15 +9,13 @@ import {
 export class JournalListComponent implements OnInit {
   constructor() {}
 
-  @ViewChild(TextfieldComponent)
-  private textfieldComponent: TextfieldComponent;
+  private namefield: Textfield;
 
   ngOnInit() {
-    const textfield: Textfield = {
+    this.namefield = {
       name: 'test1',
       value: '入力済みです',
       placeholder: '値を設定してください'
     };
-    this.textfieldComponent.setObject(textfield);
   }
 }
