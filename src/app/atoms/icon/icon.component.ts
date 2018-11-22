@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-icon',
@@ -6,14 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icon.component.scss']
 })
 export class IconComponent implements OnInit {
-  private icon: Icon;
+  @Input() icon: Icon;
   constructor() {}
 
   ngOnInit() {}
-
-  setIcon(icon: Icon): void {
-    this.icon = icon;
-  }
 }
 
 export interface Icon {
