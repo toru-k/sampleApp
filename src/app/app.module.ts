@@ -24,6 +24,7 @@ import { SummaryCommentCardComponent } from './molecules/summary-comment-card/su
 import { IconComponent } from './atoms/icon/icon.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './atoms/button/button.component';
+import { IconButtonComponent } from './atoms/icon-button/icon-button.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ButtonComponent } from './atoms/button/button.component';
     WorkingTimeCardComponent,
     SummaryCommentCardComponent,
     IconComponent,
-    ButtonComponent
+    ButtonComponent,
+    IconButtonComponent
   ],
   imports: [
     BrowserModule,
