@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Icon } from '../../atoms/icon/icon.component';
 import { IconButton } from '../../atoms/icon-button/icon-button.component';
 
 @Component({
@@ -9,9 +8,9 @@ import { IconButton } from '../../atoms/icon-button/icon-button.component';
 })
 export class FooterComponent implements OnInit {
   private homeIconButton: IconButton;
-  private searchicon: Icon;
-  private historyicon: Icon;
-  private viewlisticon: Icon;
+  private searchicon: IconButton;
+  private historyicon: IconButton;
+  private viewlisticon: IconButton;
   constructor() {}
 
   ngOnInit() {
@@ -20,8 +19,8 @@ export class FooterComponent implements OnInit {
       color: 'warn',
       disable: false
     };
-    this.searchicon = { name: 'search' };
-    this.historyicon = { name: 'history' };
-    this.viewlisticon = { name: 'list' };
+    this.searchicon = { name: 'search', color: 'accent', disable: false };
+    this.historyicon = { name: 'history', color: '', disable: false };
+    this.viewlisticon = { name: 'list', color: 'accent', disable: true };
   }
 }
