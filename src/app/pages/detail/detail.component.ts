@@ -4,11 +4,11 @@ import { Button } from '../../atoms/button/button.component';
 import { Card } from 'src/app/atoms/card/card.component';
 
 @Component({
-  selector: 'app-journal-list',
-  templateUrl: './journal-list.component.html',
-  styleUrls: ['./journal-list.component.scss']
+  selector: 'app-detail',
+  templateUrl: './detail.component.html',
+  styleUrls: ['./detail.component.scss']
 })
-export class JournalListComponent implements OnInit {
+export class DetailComponent implements OnInit {
   constructor() {}
 
   private namefield: Textfield;

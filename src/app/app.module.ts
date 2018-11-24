@@ -13,7 +13,7 @@ import {
   MatButtonModule,
   MatCardModule
 } from '@angular/material';
-import { JournalListComponent } from './pages/journal-list/journal-list.component';
+import { ListComponent } from './pages/list/list.component';
 import { HeaderComponent } from './organisms/header/header.component';
 import { FooterComponent } from './organisms/footer/footer.component';
 import { HeaderItemsComponent } from './molecules/header-items/header-items.component';
@@ -27,12 +27,15 @@ import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './atoms/button/button.component';
 import { IconButtonComponent } from './atoms/icon-button/icon-button.component';
 import { CardComponent } from './atoms/card/card.component';
+import { DetailComponent } from './pages/detail/detail.component';
+import { InputComponent } from './pages/input/input.component';
+import { LinkComponent } from './atoms/link/link.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextfieldComponent,
-    JournalListComponent,
+    ListComponent,
     HeaderComponent,
     FooterComponent,
     HeaderItemsComponent,
@@ -44,7 +47,10 @@ import { CardComponent } from './atoms/card/card.component';
     IconComponent,
     ButtonComponent,
     IconButtonComponent,
-    CardComponent
+    CardComponent,
+    DetailComponent,
+    InputComponent,
+    LinkComponent
   ],
   imports: [
     BrowserModule,
