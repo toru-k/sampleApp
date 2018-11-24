@@ -9,7 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatInputModule,
   MatIconModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatButtonModule
 } from '@angular/material';
 import { JournalListComponent } from './pages/journal-list/journal-list.component';
 import { HeaderComponent } from './organisms/header/header.component';
@@ -22,6 +23,7 @@ import { WorkingTimeCardComponent } from './molecules/working-time-card/working-
 import { SummaryCommentCardComponent } from './molecules/summary-comment-card/summary-comment-card.component';
 import { IconComponent } from './atoms/icon/icon.component';
 import { FormsModule } from '@angular/forms';
+import { ButtonComponent } from './atoms/button/button.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { FormsModule } from '@angular/forms';
     JournalCardComponent,
     WorkingTimeCardComponent,
     SummaryCommentCardComponent,
-    IconComponent
+    IconComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     MatInputModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
