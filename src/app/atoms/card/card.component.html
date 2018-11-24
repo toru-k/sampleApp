@@ -1,0 +1,27 @@
+<mat-card class="card">
+  <mat-card-header>
+    <img mat-card-avatar src="{{card.avatarUrl}}" class="header-image" />
+    <mat-card-title>{{card.headerTitle}}</mat-card-title>
+    <mat-card-subtitle>{{card.headerSubtitle}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{card.imgUrl}}" alt="{{card.imgAlt}}">
+  <mat-card-content>
+    <table>
+      <tr>
+        <td>書名</td>
+        <td>{{card.title}}</td>
+      </tr>
+      <tr>
+        <td>発行</td>
+        <td>{{card.dateOfIssue}}</td>
+      </tr>
+    </table>
+    <p>
+      {{card.content}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>{{card.actionButton1}}</button>
+    <button mat-button>{{card.actionButton2}}</button>
+  </mat-card-actions>
+</mat-card>

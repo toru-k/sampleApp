@@ -10,7 +10,8 @@ import {
   MatInputModule,
   MatIconModule,
   MatToolbarModule,
-  MatButtonModule
+  MatButtonModule,
+  MatCardModule
 } from '@angular/material';
 import { JournalListComponent } from './pages/journal-list/journal-list.component';
 import { HeaderComponent } from './organisms/header/header.component';
@@ -25,6 +26,7 @@ import { IconComponent } from './atoms/icon/icon.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './atoms/button/button.component';
 import { IconButtonComponent } from './atoms/icon-button/icon-button.component';
+import { CardComponent } from './atoms/card/card.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { IconButtonComponent } from './atoms/icon-button/icon-button.component';
     SummaryCommentCardComponent,
     IconComponent,
     ButtonComponent,
-    IconButtonComponent
+    IconButtonComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { IconButtonComponent } from './atoms/icon-button/icon-button.component';
     MatInputModule,
     MatIconModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
