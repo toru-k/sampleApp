@@ -16,12 +16,6 @@ import {
 import { ListComponent } from './pages/list/list.component';
 import { HeaderComponent } from './organisms/header/header.component';
 import { FooterComponent } from './organisms/footer/footer.component';
-import { HeaderItemsComponent } from './molecules/header-items/header-items.component';
-import { FooterItemsComponent } from './molecules/footer-items/footer-items.component';
-import { StoreCardComponent } from './molecules/store-card/store-card.component';
-import { JournalCardComponent } from './molecules/journal-card/journal-card.component';
-import { WorkingTimeCardComponent } from './molecules/working-time-card/working-time-card.component';
-import { SummaryCommentCardComponent } from './molecules/summary-comment-card/summary-comment-card.component';
 import { IconComponent } from './atoms/icon/icon.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './atoms/button/button.component';
@@ -38,12 +32,6 @@ import { LinkComponent } from './atoms/link/link.component';
     ListComponent,
     HeaderComponent,
     FooterComponent,
-    HeaderItemsComponent,
-    FooterItemsComponent,
-    StoreCardComponent,
-    JournalCardComponent,
-    WorkingTimeCardComponent,
-    SummaryCommentCardComponent,
     IconComponent,
     ButtonComponent,
     IconButtonComponent,
