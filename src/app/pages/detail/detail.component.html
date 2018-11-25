@@ -3,12 +3,12 @@
   <div class="contents">
     <form>
       <div>
-        <app-card [card]="nakajimaCard"></app-card>
+        <app-card [card]="detailService.card"></app-card>
       </div>
       <div class="input-area">
-        <app-textfield [textfield]="namefield"></app-textfield><br />
-        <app-button [button]="okButton" class="button"></app-button>
-        <app-button [button]="disalbedButton" class="button"></app-button>
+        <app-textfield [textfield]="detailService.namefield"></app-textfield><br />
+        <app-button [button]="detailService.okButton" class="button"></app-button>
+        <app-button [button]="detailService.disalbedButton" class="button"></app-button>
       </div>
     </form>
   </div>
