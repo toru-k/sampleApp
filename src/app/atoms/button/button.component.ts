@@ -16,4 +16,5 @@ export interface Button {
   title: string;
   color: string;
   disable: boolean;
+  clickButton(event: any): void;
 }

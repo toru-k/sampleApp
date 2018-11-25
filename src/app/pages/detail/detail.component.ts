@@ -25,12 +25,16 @@ export class DetailComponent implements OnInit {
     this.okButton = {
       title: 'OK',
       color: 'primary',
-      disable: false
+      disable: false,
+      clickButton: this.clickOKButton
     };
     this.disalbedButton = {
       title: 'disabled',
       color: 'primary',
-      disable: true
+      disable: true,
+      clickButton: function clickDisabledButton(event: any): void {
+        console.log(event.target.innerText);
+      }
     };
     this.nakajimaCard = {
       headerTitle: '中島 敦',
@@ -45,5 +49,8 @@ export class DetailComponent implements OnInit {
       actionButton1: 'LIKE',
       actionButton2: 'SHARE'
     };
+  }
+  clickOKButton(event: any): void {
+    console.log(event.target.innerText);
   }
 }
