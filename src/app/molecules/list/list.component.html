@@ -1,0 +1,16 @@
+<table mat-table [dataSource]="novels" class="mat-elevation-z8">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let novel"> {{novel.id}} </td>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> 著者 </th>
+    <td mat-cell *matCellDef="let novel"><a routerLink="/detail/{{novel.id}}"> {{novel.name}} </a></td>
+  </ng-container>
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef> 書名 </th>
+    <td mat-cell *matCellDef="let novel"> {{novel.title}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

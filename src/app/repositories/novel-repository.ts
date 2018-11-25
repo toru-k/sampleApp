@@ -18,7 +18,8 @@ export class NovelRepository {
 }
 
 export interface Novel {
-  headerTitle: string;
+  id: number;
+  name: string;
   headerSubtitle: string;
   avatarUrl: string;
   imgUrl: string;

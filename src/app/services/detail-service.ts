@@ -1,6 +1,7 @@
+import { ActivatedRoute } from '@angular/router';
 import { Textfield } from '../atoms/textfield/textfield.component';
 import { Button } from '../atoms/button/button.component';
-import { Card } from '../atoms/card/card.component';
+import { Card } from '../molecules/card/card.component';
 import { NovelRepository } from '../repositories/novel-repository';
 
 export class DetailService {
@@ -9,8 +10,12 @@ export class DetailService {
   disalbedButton: Button;
   card: Card;
 
-  constructor(private repository: NovelRepository) {
-    this.init(0);
+  constructor(
+    private route: ActivatedRoute,
+    private repository: NovelRepository
+  ) {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.init(id - 1);
   }
 
   clickBack(event: any): void {
@@ -46,7 +51,7 @@ export class DetailService {
     };
     const novel = this.repository.getNovel(index);
     this.card = {
-      headerTitle: novel.headerTitle,
+      headerTitle: novel.name,
       headerSubtitle: novel.headerSubtitle,
       avatarUrl: novel.avatarUrl,
       imgUrl: novel.imgUrl,

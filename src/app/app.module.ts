@@ -11,26 +11,28 @@ import {
   MatIconModule,
   MatToolbarModule,
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  MatTableModule
 } from '@angular/material';
-import { ListComponent } from './pages/list/list.component';
+import { NovelListsComponent } from './pages/novel-lists/novel-lists.component';
 import { HeaderComponent } from './organisms/header/header.component';
 import { FooterComponent } from './organisms/footer/footer.component';
 import { IconComponent } from './atoms/icon/icon.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './atoms/button/button.component';
 import { IconButtonComponent } from './atoms/icon-button/icon-button.component';
-import { CardComponent } from './atoms/card/card.component';
+import { CardComponent } from './molecules/card/card.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { InputComponent } from './pages/input/input.component';
 import { LinkComponent } from './atoms/link/link.component';
 import { Error404Component } from './pages/error404/error404.component';
+import { ListComponent } from './molecules/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextfieldComponent,
-    ListComponent,
+    NovelListsComponent,
     HeaderComponent,
     FooterComponent,
     IconComponent,
@@ -40,7 +42,8 @@ import { Error404Component } from './pages/error404/error404.component';
     DetailComponent,
     InputComponent,
     LinkComponent,
-    Error404Component
+    Error404Component,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { Error404Component } from './pages/error404/error404.component';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
