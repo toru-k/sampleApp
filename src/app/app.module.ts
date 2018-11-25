@@ -24,6 +24,7 @@ import { CardComponent } from './atoms/card/card.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { InputComponent } from './pages/input/input.component';
 import { LinkComponent } from './atoms/link/link.component';
+import { Error404Component } from './pages/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LinkComponent } from './atoms/link/link.component';
     CardComponent,
     DetailComponent,
     InputComponent,
-    LinkComponent
+    LinkComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
