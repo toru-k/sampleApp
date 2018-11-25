@@ -1,4 +1,4 @@
-import { Novel } from '../repositories/novel-repository.service';
+import { Novel } from '../repositories/novel-repository';
 
 export const NOVELS: Novel[] = [
   {

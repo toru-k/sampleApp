@@ -1,15 +1,15 @@
 import { Textfield } from '../atoms/textfield/textfield.component';
 import { Button } from '../atoms/button/button.component';
 import { Card } from '../atoms/card/card.component';
-import { NovelRepositoryService } from '../repositories/novel-repository.service';
+import { NovelRepository } from '../repositories/novel-repository';
 
-export class DetailServiceService {
+export class DetailService {
   namefield: Textfield;
   okButton: Button;
   disalbedButton: Button;
   card: Card;
 
-  constructor(private repository: NovelRepositoryService) {
+  constructor(private repository: NovelRepository) {
     this.init(0);
   }
 

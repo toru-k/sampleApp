@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Novel } from '../repositories/novel-repository.service';
+import { Novel } from './novel-repository';
 import { NOVELS } from '../mock/novels';
 
 @Injectable({
   providedIn: 'root'
 })
-export class NovelRepositoryService {
+export class NovelRepository {
   constructor() {}
 
   getNovels(): Novel[] {

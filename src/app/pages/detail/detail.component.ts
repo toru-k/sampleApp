@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Textfield } from '../../atoms/textfield/textfield.component';
 import { Button } from '../../atoms/button/button.component';
 import { Card } from '../../atoms/card/card.component';
-import { NovelRepositoryService } from '../../repositories/novel-repository.service';
-import { DetailServiceService } from '../../services/detail-service.service';
+import { NovelRepository } from '../../repositories/novel-repository';
+import { DetailService } from '../../services/detail-service';
 
 @Component({
   selector: 'app-detail',
@@ -11,10 +11,10 @@ import { DetailServiceService } from '../../services/detail-service.service';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-  detailService: DetailServiceService;
+  detailService: DetailService;
 
-  constructor(private repository: NovelRepositoryService) {
-    this.detailService = new DetailServiceService(repository);
+  constructor(private repository: NovelRepository) {
+    this.detailService = new DetailService(repository);
   }
 
   ngOnInit() {}
