@@ -22,6 +22,10 @@ export interface Card {
   title: string;
   dateOfIssue: Date;
   content: string;
-  actionButton1: string;
-  actionButton2: string;
+  actionTitle1: string;
+  actionTitle2: string;
+  actionLink1: string;
+  actionLink2: string;
+  action1(event: any): void;
+  action2(event: any): void;
 }

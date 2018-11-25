@@ -21,7 +21,7 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>{{card.actionButton1}}</button>
-    <button mat-button>{{card.actionButton2}}</button>
+    <button mat-button routerLink="{{card.actionLink1}}" (click)="card.action1($event)">{{card.actionTitle1}}</button>
+    <button mat-button routerLink="{{card.actionLink2}}" (click)="card.action2($event)">{{card.actionTitle2}}</button>
   </mat-card-actions>
 </mat-card>
