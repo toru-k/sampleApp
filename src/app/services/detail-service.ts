@@ -2,13 +2,15 @@ import { ActivatedRoute } from '@angular/router';
 import { Textfield } from '../atoms/textfield/textfield.component';
 import { Button } from '../atoms/button/button.component';
 import { Card } from '../molecules/card/card.component';
-import { NovelRepository } from '../repositories/novel-repository';
+import { NovelRepository, Novel } from '../repositories/novel-repository';
 
 export class DetailService {
   namefield: Textfield;
   okButton: Button;
   disalbedButton: Button;
   card: Card;
+  novels: Novel[];
+  novel: Novel;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,6 +29,28 @@ export class DetailService {
 
   clickOKButton(event: any): void {
     console.log(event.target.innerText);
+  }
+
+  getNovel(index: number): void {
+    this.repository.getNovel(index).subscribe(novel => {
+      this.novel = novel;
+      this.card = {
+        headerTitle: this.novel.name,
+        headerSubtitle: this.novel.headerSubtitle,
+        avatarUrl: this.novel.avatarUrl,
+        imgUrl: this.novel.imgUrl,
+        imgAlt: this.novel.imgAlt,
+        title: this.novel.title,
+        dateOfIssue: this.novel.dateOfIssue,
+        content: this.novel.content,
+        actionTitle1: '一覧画面へ',
+        actionTitle2: '入力画面へ',
+        action1: this.clickBack,
+        action2: this.clickPrev,
+        actionLink1: '/list',
+        actionLink2: '/input'
+      };
+    });
   }
 
   init(index: number) {
@@ -49,22 +73,6 @@ export class DetailService {
         console.log(event.target.innerText);
       }
     };
-    const novel = this.repository.getNovel(index);
-    this.card = {
-      headerTitle: novel.name,
-      headerSubtitle: novel.headerSubtitle,
-      avatarUrl: novel.avatarUrl,
-      imgUrl: novel.imgUrl,
-      imgAlt: novel.imgAlt,
-      title: novel.title,
-      dateOfIssue: novel.dateOfIssue,
-      content: novel.content,
-      actionTitle1: '一覧画面へ',
-      actionTitle2: '入力画面へ',
-      action1: this.clickBack,
-      action2: this.clickPrev,
-      actionLink1: '/list',
-      actionLink2: '/input'
-    };
+    this.getNovel(index);
   }
 }

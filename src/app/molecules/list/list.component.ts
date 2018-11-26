@@ -14,6 +14,6 @@ export class ListComponent implements OnInit {
   constructor(private repository: NovelRepository) {}
 
   ngOnInit() {
-    this.novels = this.repository.getNovels();
+    this.repository.getNovels().subscribe(novels => (this.novels = novels));
   }
 }

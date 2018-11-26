@@ -27,6 +27,9 @@ import { InputComponent } from './pages/input/input.component';
 import { LinkComponent } from './atoms/link/link.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { ListComponent } from './molecules/list/list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpErrorHandler } from './services/http-error-handler.service';
+import { MessageService } from './services/message.service';
 
 @NgModule({
   declarations: [
@@ -58,9 +61,10 @@ import { ListComponent } from './molecules/list/list.component';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpErrorHandler, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
